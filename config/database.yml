@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: makersbnb
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: makersbnb_test
+  timeout: 5000
