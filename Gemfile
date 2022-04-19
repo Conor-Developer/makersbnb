@@ -1,22 +1,22 @@
 source 'https://rubygems.org'
 
-ruby '3.0.2'
+ruby '3.1.1'
 
+gem 'activerecord'
+gem 'bcrypt'
+gem 'pg'
+gem 'rake'
 gem 'sinatra'
+gem 'sinatra-activerecord'
 gem 'sinatra-flash'
 gem 'webrick'
-gem 'pg'
-gem 'bcrypt'
-gem 'activerecord'
-gem 'sinatra-activerecord'
-gem 'rake'
 
 group :test do
+  gem 'capybara'
+  gem 'launchy'
   gem 'rspec'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
-  gem 'capybara'
-  gem 'launchy'
 end
 
 group :development, :test do
