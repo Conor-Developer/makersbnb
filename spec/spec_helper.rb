@@ -1,6 +1,7 @@
 require 'simplecov'
 require 'simplecov-console'
 require 'capybara/rspec'
+require_relative './persisted_data'
 
 ENV['RACK_ENV'] = 'test'
 
