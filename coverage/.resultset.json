@@ -11,19 +11,9 @@
           null
         ]
       },
-      "/Users/nadia/Desktop/code/makersbnb/spec/features/user_log_in_spec.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           1,
@@ -38,7 +28,6 @@
       "/Users/nadia/Desktop/code/makersbnb/spec/property_spec.rb": {
         "lines": [
           1,
-          null,
           1,
           1,
           1,
@@ -61,7 +50,14 @@
       "/Users/nadia/Desktop/code/makersbnb/lib/property.rb": {
         "lines": [
           1,
+          null,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
