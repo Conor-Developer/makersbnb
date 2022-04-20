@@ -2,6 +2,7 @@ require 'simplecov'
 require 'simplecov-console'
 require 'capybara/rspec'
 require_relative './persisted_data'
+require_relative './truncate_tables'
 
 ENV['RACK_ENV'] = 'test'
 
@@ -35,7 +36,7 @@ SimpleCov.start
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.before(:each) do
-
+    truncate_tables
   end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
