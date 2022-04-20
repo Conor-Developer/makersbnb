@@ -3,7 +3,7 @@ feature 'A user can log in to their account' do
     create_account
     visit('/')
     log_in
-    expect(page).to have_content('You have logged in successfully')
+    expect(page).to have_content('Properties')
   end
 
   scenario 'A non-registered user fills in Login form and receives error' do

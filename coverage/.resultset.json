@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/nadia/Desktop/code/makersbnb/spec/features/sign_up_spec.rb": {
+
         "lines": [
           1,
           1,
@@ -11,6 +11,7 @@
           null
         ]
       },
+
         "lines": [
           1,
           1,
@@ -47,7 +48,7 @@
           null
         ]
       },
-      "/Users/nadia/Desktop/code/makersbnb/lib/property.rb": {
+
         "lines": [
           1,
           null,
@@ -61,7 +62,7 @@
           null
         ]
       },
-      "/Users/nadia/Desktop/code/makersbnb/spec/user_spec.rb": {
+
         "lines": [
           1,
           null,
@@ -76,6 +77,6 @@
         ]
       }
     },
-    "timestamp": 1650471544
+
   }
 }
