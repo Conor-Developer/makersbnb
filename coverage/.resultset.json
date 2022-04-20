@@ -7,6 +7,34 @@
           1,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/rupertpople/week_5/makersbnb/spec/features/user_log_in_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/rupertpople/week_5/makersbnb/spec/features/user_log_out_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -27,15 +55,8 @@
           null,
           null
         ]
-      },
-      "/Users/rupertpople/week_5/makersbnb/lib/user.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1650452748
+    "timestamp": 1650469298
   }
 }
