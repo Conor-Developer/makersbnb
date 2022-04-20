@@ -1,0 +1,28 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/joemcnally/Desktop/projects/week_5/makersbnb/spec/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/joemcnally/Desktop/projects/week_5/makersbnb/lib/user.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1650450504
+  }
+}
