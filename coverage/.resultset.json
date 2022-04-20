@@ -1,7 +1,20 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/joemcnally/Desktop/projects/week_5/makersbnb/spec/user_spec.rb": {
+      "/Users/rupertpople/week_5/makersbnb/spec/features/sign_up_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/rupertpople/week_5/makersbnb/spec/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -15,7 +28,7 @@
           null
         ]
       },
-      "/Users/joemcnally/Desktop/projects/week_5/makersbnb/lib/user.rb": {
+      "/Users/rupertpople/week_5/makersbnb/lib/user.rb": {
         "lines": [
           1,
           1,
@@ -23,6 +36,6 @@
         ]
       }
     },
-    "timestamp": 1650450504
+    "timestamp": 1650452748
   }
 }

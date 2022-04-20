@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require 'sinatra/flash'
 require 'sinatra/activerecord'
+require_relative './lib/user'
 
 class MakersBnb < Sinatra::Base
   configure :development do
