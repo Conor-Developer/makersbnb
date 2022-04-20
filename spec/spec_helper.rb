@@ -2,6 +2,8 @@ require 'simplecov'
 require 'simplecov-console'
 require 'capybara/rspec'
 require_relative './persisted_data'
+require_relative './truncate_tables'
+require_relative './features/web_helpers'
 
 ENV['RACK_ENV'] = 'test'
 
@@ -14,7 +16,7 @@ Capybara.app = MakersBnb
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
   # Want a nice code coverage website? Uncomment this next line!
-  SimpleCov::Formatter::HTMLFormatter
+  # SimpleCov::Formatter::HTMLFormatter
 ])
 SimpleCov.start
 
@@ -35,7 +37,7 @@ SimpleCov.start
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.before(:each) do
-
+    truncate_tables
   end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
