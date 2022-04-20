@@ -26,23 +26,29 @@ class MakersBnb < Sinatra::Base
     erb :'/sign_up'
   end
 
-  get '/log-in' do
-    erb :'/log_in'
+  get '/sessions/new' do
+    erb :'/sessions/new'
   end
 
-  post '/log-in' do
+  post '/sessions' do
     user = User.find_by(email: params[:email])
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect '/log-in/new'
+      redirect '/spaces'
     else
       flash[:notice] = "Please check your email or password"
-      redirect '/log-in'
+      redirect '/sessions/new'
     end
   end
   
-  get '/log-in/new' do
-    erb :'/logged_in'
+  get '/spaces' do
+    erb :'/spaces'
+  end
+
+  post '/sessions/destroy' do
+    session.clear
+    flash[:notice] = 'You have successfully logged out'
+    redirect '/sessions/new'
   end
 
   run! if app_file == $PROGRAM_NAME
