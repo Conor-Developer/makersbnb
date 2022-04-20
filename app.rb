@@ -34,15 +34,15 @@ class MakersBnb < Sinatra::Base
     user = User.find_by(email: params[:email])
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect '/spaces'
+      redirect '/properties'
     else
       flash[:notice] = "Please check your email or password"
       redirect '/sessions/new'
     end
   end
   
-  get '/spaces' do
-    erb :'/spaces'
+  get '/properties' do
+    erb :'/properties/index'
   end
 
   post '/sessions/destroy' do
