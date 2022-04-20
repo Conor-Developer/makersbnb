@@ -13,7 +13,16 @@ class MakersBnb < Sinatra::Base
   enable :sessions
 
   get '/' do
-    'Hello World'
+    erb :'/index'
+  end
+
+  post '/sign-up' do
+    User.create(params)
+    redirect '/sign-up'
+  end
+
+  get '/sign-up' do
+    erb :'/sign_up'
   end
 
   run! if app_file == $PROGRAM_NAME
