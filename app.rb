@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require 'sinatra/flash'
 require 'sinatra/activerecord'
 require_relative './lib/user'
+require_relative './lib/property'
 
 class MakersBnb < Sinatra::Base
   configure :development do
@@ -42,7 +43,19 @@ class MakersBnb < Sinatra::Base
   end
   
   get '/properties' do
+    @user_id = session[:user_id]
+    @properties = Property.all
     erb :'/properties/index'
+  end
+
+  get '/properties/new' do
+    @user_id = session[:user_id]
+    erb :'/properties/new'
+  end
+
+  post '/properties' do
+    Property.create(params)
+    redirect '/properties'
   end
 
   post '/sessions/destroy' do
