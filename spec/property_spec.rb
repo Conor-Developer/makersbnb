@@ -16,4 +16,9 @@ describe Property do
     property = Property.create(name: '')
     expect(Property.all).to be_empty
   end
+
+  it 'should have an owner as a foreign key' do
+    expect( Property.reflections.keys).to include('user')
+  end
+
 end

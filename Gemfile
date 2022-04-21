@@ -11,12 +11,14 @@ gem 'sinatra-activerecord'
 gem 'sinatra-flash'
 gem 'webrick'
 
+
 group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'shoulda'
 end
 
 group :development, :test do
