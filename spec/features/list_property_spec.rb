@@ -4,7 +4,7 @@ feature 'list property' do
       visit('/')
       log_in
       click_button('List new property')
-      fill_in 'Property name', with: "Mansion"
+      fill_in 'name', with: "Mansion"
       click_button('Submit')
       expect(page).to have_content("Mansion")
     end
