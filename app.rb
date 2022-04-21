@@ -54,9 +54,16 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/properties' do
-    property = Property.new(params)
+    p params
+    property = Property.new(name: params[:name], description: params[:description],price: params[:price])
+    list = (params[:start_date]..params[:end_date])
     property.user = User.find_by(id: session[:user_id])
     property.save
+    list.each do |date|
+      availability = Availability.new(date: date, availability: true, confirmation_pending?: false)
+      availability.property = Property.find_by(name: params[:name])
+      availability.save
+    end
     redirect '/properties'
   end
 
@@ -65,6 +72,10 @@ class MakersBnb < Sinatra::Base
     flash[:notice] = 'You have successfully logged out'
     redirect '/sessions/new'
   end
+
+   get '/properties/:id' do
+    erb :'properties/view_dates'
+   end
 
   run! if app_file == $PROGRAM_NAME
 end
