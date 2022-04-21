@@ -1,8 +1,15 @@
 <% if @user_id %>
   <form action='/properties' method='POST'>
+  <label for='name'> Name </label>
     <input type='text' name='name'>
+  <label for='description'> Description </label>
     <input type='text' name='description'>
+  <label for='price'> Price </label>
     <input type='number' step='1' name='price'>
+    <label for="start_date">Available from:</label>
+    <input type="date" name="start_date">
+    <label for="end_date">Available to:</label>
+    <input type="date" name="end_date">
     <input type='submit' value='Submit'>
   </form>
 <% end %>

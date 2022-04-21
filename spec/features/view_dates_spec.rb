@@ -13,7 +13,10 @@ feature 'list all available dates' do
       create_account
       visit('/')
       log_in
+      list_property
       first('.properties').click_link
-      expect(page).to have_content('Dates')
+      expect(page).to have_content('20/04/2022')
+      expect(page).to have_content('21/04/2022')
+      expect(page).to have_content('22/04/2022')
     end
   end
