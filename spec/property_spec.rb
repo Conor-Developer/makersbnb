@@ -32,6 +32,6 @@ describe Property do
     property = Property.create(name: 'Flat1', description: '1 bedroom flat', price: 50)
     persisted_data = persisted_data(table: 'properties', id: property.id)
     expect(property).to be_a Property
-    expect(property.description).to eq persisted_data.first['price']
+    expect(property.price).to eq persisted_data.first['price'].to_i
   end
 end
