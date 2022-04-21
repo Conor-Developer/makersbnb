@@ -4,6 +4,7 @@ require 'sinatra/flash'
 require 'sinatra/activerecord'
 require_relative './lib/user'
 require_relative './lib/property'
+require_relative './lib/availability'
 
 class MakersBnb < Sinatra::Base
   configure :development do
@@ -54,14 +55,14 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/properties' do
-    p params
     property = Property.new(name: params[:name], description: params[:description],price: params[:price])
-    list = (params[:start_date]..params[:end_date])
+    list = [params[:start_date]..params[:end_date]]
+    p list
     property.user = User.find_by(id: session[:user_id])
     property.save
     list.each do |date|
       availability = Availability.new(date: date, availability: true, confirmation_pending?: false)
-      availability.property = Property.find_by(name: params[:name])
+      availability.property_id = Property.find_by(name: params[:name])
       availability.save
     end
     redirect '/properties'

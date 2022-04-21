@@ -4,7 +4,6 @@ feature 'list all available dates' do
       create_account
       visit('/')
       log_in
-      # first('.properties').click_button
       expect(page).to have_link('Mansion', href: "/properties/#{property.id}" )
     end
 

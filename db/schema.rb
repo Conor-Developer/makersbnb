@@ -28,12 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_21_154959) do
     t.integer "price"
   end
 
-  create_table "property_availability", force: :cascade do |t|
-    t.date "date"
-    t.boolean "availability"
-    t.boolean "confirmation_pending?"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
