@@ -1,7 +1,18 @@
 <h1>Properties</h1>
+
+<% if @user_id %>
 <form action='/properties/new' method='get'>
     <input type="submit" value="List new property" />
 </form>
 <form action='/sessions/destroy' method='post'>
     <input type="submit" value="Log out" />
 </form>
+<% end %>
+
+<ul>
+    <% @properties.each do |property| %>
+    <li>
+        <%= property.name %>
+    </li>
+    <% end %>
+</ul>
