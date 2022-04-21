@@ -6,7 +6,7 @@ describe Property do
   end
 
   it 'checks name of property' do
-    property = Property.create(name: 'Flat1')
+    property = Property.create(name: 'Flat1', description: '1 bedroom flat', price: 50)
     persisted_data = persisted_data(table: 'properties', id: property.id)
     expect(property).to be_a Property
     expect(property.name).to eq persisted_data.first['name']
@@ -21,4 +21,17 @@ describe Property do
     expect( Property.reflections.keys).to include('user')
   end
 
+  it 'checks description of property' do
+    property = Property.create(name: 'Flat1', description: '1 bedroom flat', price: 50)
+    persisted_data = persisted_data(table: 'properties', id: property.id)
+    expect(property).to be_a Property
+    expect(property.description).to eq persisted_data.first['description']
+  end
+
+  it 'checks the price of property' do
+    property = Property.create(name: 'Flat1', description: '1 bedroom flat', price: 50)
+    persisted_data = persisted_data(table: 'properties', id: property.id)
+    expect(property).to be_a Property
+    expect(property.description).to eq persisted_data.first['price']
+  end
 end
