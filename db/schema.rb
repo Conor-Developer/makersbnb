@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_21_151645) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_21_154959) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "availabilities", force: :cascade do |t|
+    t.date "date"
+    t.boolean "availability"
+    t.boolean "confirmation_pending?"
+    t.integer "property_id"
+  end
 
   create_table "properties", force: :cascade do |t|
     t.string "name"
@@ -22,7 +29,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_21_151645) do
   end
 
   create_table "property_availability", force: :cascade do |t|
-    t.integer "property_id"
     t.date "date"
     t.boolean "availability"
     t.boolean "confirmation_pending?"
