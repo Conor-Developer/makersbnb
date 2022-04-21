@@ -85,6 +85,12 @@ GEM
       parser (>= 3.1.1.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
+    shoulda (4.0.0)
+      shoulda-context (~> 2.0)
+      shoulda-matchers (~> 4.0)
+    shoulda-context (2.0.0)
+    shoulda-matchers (4.5.1)
+      activesupport (>= 4.2.0)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -136,6 +142,7 @@ DEPENDENCIES
   rake
   rspec
   rubocop (= 1.20)
+  shoulda
   simplecov
   simplecov-console
   sinatra
