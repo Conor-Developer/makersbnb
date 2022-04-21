@@ -54,7 +54,9 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/properties' do
-    Property.create(params)
+    property = Property.new(params)
+    property.user = User.find_by(id: session[:user_id])
+    property.save
     redirect '/properties'
   end
 
