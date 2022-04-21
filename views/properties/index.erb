@@ -13,6 +13,8 @@
     <% @properties.each do |property| %>
     <li>
         <%= property.name %>
+        <%= property.description %>
+        £<%= property.price %> per night
     </li>
     <% end %>
 </ul>
