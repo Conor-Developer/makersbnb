@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_21_105959) do
     t.string "name"
     t.integer "user_id"
     t.text "description"
-    t.integer "price"
+    t.float "price"
   end
 
   create_table "users", force: :cascade do |t|

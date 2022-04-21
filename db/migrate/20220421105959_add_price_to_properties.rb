@@ -1,5 +1,5 @@
 class AddPriceToProperties < ActiveRecord::Migration[7.0]
   def change
-    add_column :properties, :price, :integer
+    add_column :properties, :price, :float
   end
 end
