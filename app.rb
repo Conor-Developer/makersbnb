@@ -66,5 +66,9 @@ class MakersBnb < Sinatra::Base
     redirect '/sessions/new'
   end
 
+   get '/properties/:id' do
+    erb :'properties/view_dates'
+   end
+
   run! if app_file == $PROGRAM_NAME
 end
