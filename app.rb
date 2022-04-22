@@ -74,7 +74,7 @@ class MakersBnb < Sinatra::Base
   end
 
    get '/properties/:id' do
-    session[:property_id] = params[:id]
+    @property = Property.find_by(id: params[:id])
     @property_id = params[:id]
     @dates = Availability.where(property_id: params[:id]).order(date: :asc)
     erb :'properties/view_dates'
