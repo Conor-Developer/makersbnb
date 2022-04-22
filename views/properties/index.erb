@@ -12,7 +12,7 @@
 <ul>
     <% @properties.each do |property| %>
     <li class='properties'>
-       <a  href="/properties/<%= property.id %>"> <%= property.name %> </a>
+       <a  href="/properties/<%= property.id %>"><%= property.name %></a>
         <%= property.description %>
         £<%= property.price %> per night
     </li>
