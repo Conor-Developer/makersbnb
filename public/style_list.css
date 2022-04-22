@@ -1,33 +1,21 @@
 
 img {
   opacity: 0.5;
-  position: relative;
+  position: absolute;
+}
+
+body{
+  height:100%;
 }
 
 .listingcontainer {
-  position: relative;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-family: Roboto, sans-serif;
+  position:relative;
 }
-
-/* Add border to the whole form */
-.form-box {
-    margin-top: 0px;
-      border-radius: 25px;
-    border-bottom-style: solid;
-    border-color: #50e54b;
-
-}
-
-/* Form input field- 100% */
-/*  
-input[type=text] {   
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  } 
-  */
-
 
  
 input[type=text], select, textarea{
@@ -60,7 +48,10 @@ input[type=submit] {
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
+  opacity: 0.95;
   padding: 20px;
+  position: relative;
+  
 }
 
 /* Floating column for labels: 25% width */
