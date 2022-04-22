@@ -10,28 +10,39 @@
 
 <body >
 
-<div class='bg'>
-</div>
-
-<div class='sign-in-container'>
-  <img src="images/sign_up_image.jpg" alt="City skyscrapers"> 
-  <div class='sign-in'>
-  <h1>Sign up</h1>
-    <form action='/sign-up' method='post'>
-      <label>Email:</label>
-      <input type='email' name='email'>
-      <br>
-      <br>
-      <label>Password:</label>
-      <input type='password' name='password' required>
-      <br>
-      <br>
-      <div class='sign-up'>
-      <input type='submit' value='Sign Up'>
+<div class="listing-container">
+<img src="images/sign_up_image.jpg" alt="City skyscrapers"/>
+<div class="sign-in" style = "top:70px; ">
+<h1 style="font-family: 'Verdana';" > Sign Up </h1>
+  <form action="/properties" method='POST'>
+  
+    <div class="row">
+      <div class="col-25">
+        <label for='email' style="font-family: 'Verdana';" > Email </label>
       </div>
-    </form>
-    <p class='account'>Already have an account? <a href="/sessions/new">Login</a></p>
+      <div class="col-75">
+      <input type='email' name='email'>
+      </div>
     </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="password" style="font-family: 'Verdana';" >Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" name="password">
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <input type="submit" value="Sign-Up">
+    </div>
+  </form>
+  <p class='account'>Already have an account? <a href="/sessions/new">Login</a></p>
+ 
+</div>
 </div>
 
 </body>
