@@ -74,8 +74,19 @@ class MakersBnb < Sinatra::Base
   end
 
    get '/properties/:id' do
-    @dates = Availability.where(property_id: params[:id])
+    session[:property_id] = params[:id]
+    @property_id = params[:id]
+    @dates = Availability.where(property_id: params[:id]).order(date: :asc)
     erb :'properties/view_dates'
+   end
+
+   post '/property/:id' do
+    Availability.find_by(id: params[:id]).update(available?: false)
+    redirect '/property/:id'
+   end
+
+   get '/property/:id' do
+    erb :'properties/book_day'
    end
 
   run! if app_file == $PROGRAM_NAME

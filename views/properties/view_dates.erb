@@ -2,12 +2,15 @@
 
 <ul>
   <% @dates.each do |day| %>
-    <li>
+    <li class='book'>
       <%= day.date.strftime("%d/%m/%Y") %>:
       <% if day.available? == true %>
-        Available
+        Available <form action='/property/<%= day.id %>' method='post'>
+                    <input type='submit' value='Book'>
+                  </form>
       <% else %>
         Not available
+        <br><br>
       <% end %>
     </li>
   <% end %>
