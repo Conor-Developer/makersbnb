@@ -1,17 +1,21 @@
-<h1> Dates </h1>
+<h1><%= @property.name %></h1>
+<%= @property.description %><br>
+£<%= @property.price %> per night
 
-<ul>
+<dl>
   <% @dates.each do |day| %>
-    <li class='book'>
-      <%= day.date.strftime("%d/%m/%Y") %>:
-      <% if day.available? == true %>
-        Available <form action='/property/<%= day.id %>' method='post'>
-                    <input type='submit' value='Book'>
-                  </form>
-      <% else %>
-        Not available
-        <br><br>
-      <% end %>
-    </li>
+    <dt>
+      <strong><%= day.date.strftime("%d/%m/%Y") %></strong>
+    </dt>
+    <dd class='book'>
+    <% if day.available? == true %>
+      Available <form action='/property/<%= day.id %>' method='post'>
+                  <input type='submit' value='Book'>
+                </form>
+    <% else %>
+      Not available
+    <br><br>
+    <% end %>
+    </dd>
   <% end %>
-<ul>
+</dl>
