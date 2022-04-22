@@ -1,8 +1,14 @@
 <h1> Dates </h1>
 
-
-<% @list.each do |date| %>
-    <li class='properties' > 
-     <a> <%=date %> </a>
-     </li>
-<%end%>
+<ul>
+  <% @dates.each do |day| %>
+    <li>
+      <%= day.date.strftime("%d/%m/%Y") %>:
+      <% if day.available? == true %>
+        Available
+      <% else %>
+        Not available
+      <% end %>
+    </li>
+  <% end %>
+<ul>

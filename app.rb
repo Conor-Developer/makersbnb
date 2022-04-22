@@ -56,13 +56,12 @@ class MakersBnb < Sinatra::Base
 
   post '/properties' do
     property = Property.new(name: params[:name], description: params[:description],price: params[:price])
-    list = [params[:start_date]..params[:end_date]]
-    p list
+    list = (params[:start_date]..params[:end_date])
     property.user = User.find_by(id: session[:user_id])
     property.save
     list.each do |date|
-      availability = Availability.new(date: date, availability: true, confirmation_pending?: false)
-      availability.property_id = Property.find_by(name: params[:name])
+      availability = Availability.new(date: date, available?: true, confirmation_pending?: false)
+      availability.property = Property.find_by(name: params[:name])
       availability.save
     end
     redirect '/properties'
@@ -75,6 +74,7 @@ class MakersBnb < Sinatra::Base
   end
 
    get '/properties/:id' do
+    @dates = Availability.where(property_id: params[:id])
     erb :'properties/view_dates'
    end
 

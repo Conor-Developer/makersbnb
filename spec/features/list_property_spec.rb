@@ -13,7 +13,6 @@ feature 'list property' do
       expect(page).to have_content "£5000 per night"
     end
 
-
     scenario 'list property with a start and end date' do
       create_account
       visit('/')
@@ -22,6 +21,4 @@ feature 'list property' do
       expect(page).to have_field('start_date', type: "date")
       expect(page).to have_field('end_date', type: "date")
     end
-
-    
   end
