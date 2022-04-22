@@ -1,9 +1,14 @@
 <h1> Dates </h1>
 
 <ul>
-  <% @dates.each do |date| %>
+  <% @dates.each do |day| %>
     <li>
-      <%= date.date.strftime("%d/%m/%Y") %>
+      <%= day.date.strftime("%d/%m/%Y") %>:
+      <% if day.available? == true %>
+        Available
+      <% else %>
+        Not available
+      <% end %>
     </li>
   <% end %>
 <ul>
