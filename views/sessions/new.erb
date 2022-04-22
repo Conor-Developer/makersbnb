@@ -6,29 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Property</title>
   <link rel="icon" type="image/x-icon" href="./Logo 2.png">   <!-- Favicon -->
-  <link rel="stylesheet" href="/log-in.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
-  <div class='sign-in-container'>
-    <img src="../images/sign_up_image.jpg" alt="City skyscrapers"> 
-    <div class='sign-in'>
-      <h2>Log in</h2>
-      <a><%=flash[:notice]%></a>
-      <form action='/sessions' method='post'>
-        <label>Email:</label>
-        <input type='email' name='email'>
-        <br>
-        <br>
-        <label>Password:</label>
-        <input type='password' name='password'>
-        <br>
-        <br>
-          <div class='log-in'>
-            <input type='submit' value='Login'>
-          </div>
-      </form>
+
+  <div class="listing-container">
+<img src="../images/sign_up_image.jpg" alt="City skyscrapers"/>
+<div class="sign-in" style = "top:70px; ">
+<h1 style="font-family: 'Verdana';" > Log in </h1>
+  <form action="/sessions" method='POST'>
+  
+    <div class="row">
+      <div class="col-25">
+        <label for='email' style="font-family: 'Verdana';" > Email </label>
+      </div>
+      <div class="col-75">
+      <input type='email' name='email'>
+      </div>
     </div>
-  </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="password" style="font-family: 'Verdana';" >Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" name="password">
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <input type="submit" value="Login">
+  
+    </div>
+  </form>
+  
+</div>
+</div>
 </body>
