@@ -1,8 +1,9 @@
 <h1> Dates </h1>
 
-
-<% @list.each do |date| %>
-    <li class='properties' > 
-     <a> <%=date %> </a>
-     </li>
-<%end%>
+<ul>
+  <% @dates.each do |date| %>
+    <li>
+      <%= date.date.strftime("%d/%m/%Y") %>
+    </li>
+  <% end %>
+<ul>

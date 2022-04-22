@@ -17,7 +17,7 @@ def list_property
     fill_in 'name', with: 'flat'
     fill_in 'description', with: '1 bed '
     fill_in 'price', with: '100'
-    fill_in 'start_date', with: Date.today.strftime('%Y-%m-%d')
-    fill_in 'end_date', with: Date.tomorrow.strftime('%Y-%m-%d')
+    fill_in 'start_date', with: Date.today
+    fill_in 'end_date', with: Date.tomorrow
     click_button('Submit')
 end
