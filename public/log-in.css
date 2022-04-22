@@ -4,6 +4,7 @@ body{
 
 img {
   opacity: 0.85;
+  position: relative;
 }
 
 .sign-in-container {
@@ -26,13 +27,14 @@ img {
   padding-right: 20px;
   font-family: Roboto, sans-serif;
   background: black;
+  padding-bottom: 50px;
 }
 
 .account {
   color: white;
 }
 
-.sign-up {
+.log-in {
   display: flex;
   align-items: center;
   justify-content: center;

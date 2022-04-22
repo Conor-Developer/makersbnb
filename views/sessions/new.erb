@@ -1,9 +1,34 @@
-<h1><%=flash[:notice]%></h1>
-<h2>Log in</h2>
-<form action='/sessions' method='post'>
-  <label>Email:</label>
-  <input type='email' name='email'>
-  <label>Password:</label>
-  <input type='password' name='password'>
-  <input type='submit' value='Login'>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Property</title>
+  <link rel="icon" type="image/x-icon" href="./Logo 2.png">   <!-- Favicon -->
+  <link rel="stylesheet" href="/log-in.css">
+</head>
+
+<body>
+
+  <div class='sign-in-container'>
+    <img src="../images/sign_up_image.jpg" alt="City skyscrapers"> 
+    <div class='sign-in'>
+      <h2>Log in</h2>
+      <a><%=flash[:notice]%></a>
+      <form action='/sessions' method='post'>
+        <label>Email:</label>
+        <input type='email' name='email'>
+        <br>
+        <br>
+        <label>Password:</label>
+        <input type='password' name='password'>
+        <br>
+        <br>
+          <div class='log-in'>
+            <input type='submit' value='Login'>
+          </div>
+      </form>
+    </div>
+  </div>
+</body>
