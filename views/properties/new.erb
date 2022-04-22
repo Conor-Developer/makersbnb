@@ -1,15 +1,61 @@
-<% if @user_id %>
-  <form action='/properties' method='POST'>
-  <label for='name'> Name </label>
-    <input type='text' name='name'>
-  <label for='description'> Description </label>
-    <input type='text' name='description'>
-  <label for='price'> Price </label>
-    <input type='number' step='1' name='price'>
-    <label for="start_date">Available from:</label>
-    <input type="date" name="start_date">
-    <label for="end_date">Available to:</label>
-    <input type="date" name="end_date">
-    <input type='submit' value='Submit'>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Property</title>
+  <link rel="icon" type="image/x-icon" href="./Logo 2.png">   <!-- Favicon -->
+  <link rel="stylesheet" href="/style_list.css">
+</head>
+
+
+<body>
+<div class="listing-container">
+<h1 style="font-family: 'Verdana';" > List a new property </h1>
+<img src="/images/listing_image.jpg" alt="background img"/>
+<div class="container">
+  <form action="/properties" method='POST'>
+  <% if @user_id %>
+    <div class="row">
+      <div class="col-25">
+        <label for='name' style="font-family: 'Verdana';" > Name </label>
+      </div>
+      <div class="col-75">
+      <input type='text' name='name'>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="start_date" style="font-family: 'Verdana';" >Available from:</label>
+      </div>
+      <div class="col-75">
+        <input type="date" name="start_date">
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="end_date" style="font-family: 'Verdana';" >Available to:</label>
+    </div>
+    <div class="col-75">
+      <input type="date" name="end_date">
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for='description' style="font-family: 'Verdana';" > Description </label>
+      </div>
+      <div class="col-75">
+        <textarea type='text' name='description' style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+    <% end %>
   </form>
-<% end %>
+</div>
+</div>
+</body>
+</html>
