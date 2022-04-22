@@ -1,8 +1,13 @@
 
-body {
-  background: #04AA6D;
+img {
+  opacity: 0.5;
+  position: relative;
 }
 
+.listingcontainer {
+  position: relative;
+  text-align: center;
+}
 
 /* Add border to the whole form */
 .form-box {
@@ -24,7 +29,7 @@ input[type=text] {
   */
 
 
-  * Style inputs, select elements and textareas */
+ 
 input[type=text], select, textarea{
   width: 100%;
   padding: 12px;
