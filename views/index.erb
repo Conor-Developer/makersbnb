@@ -1,9 +1,38 @@
-<h1>Sign up</h1>
-<form action='/sign-up' method='post'>
-  <label>Email:</label>
-  <input type='email' name='email'>
-  <label>Password:</label>
-  <input type='password' name='password' required>
-  <input type='submit' value='Sign Up'>
-</form>
-<p>Already have an account? <a href="/sessions/new">Login</a></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakersBnB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+
+<div class='bg'>
+</div>
+
+<div class='sign-in-container'>
+  <img src="images/sign_up_image.jpg" alt="City skyscrapers"> 
+  <div class='sign-in'>
+  <h1>Sign up</h1>
+    <form action='/sign-up' method='post'>
+      <label>Email:</label>
+      <input type='email' name='email'>
+      <br>
+      <br>
+      <label>Password:</label>
+      <input type='password' name='password' required>
+      <br>
+      <br>
+      <div class='sign-up'>
+      <input type='submit' value='Sign Up'>
+      </div>
+    </form>
+    <p class='account'>Already have an account? <a href="/sessions/new">Login</a></p>
+    </div>
+</div>
+
+</body>
+</html>
